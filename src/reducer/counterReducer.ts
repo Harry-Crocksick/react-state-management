@@ -1,5 +1,5 @@
 export interface State {
-  value: number;
+  count: number;
 }
 
 export type Action =
@@ -9,24 +9,24 @@ export type Action =
   | { type: "reset" };
 
 export const initialState: State = {
-  value: 0,
+  count: 0,
 };
 
 export function reducer(state: typeof initialState, action: Action) {
   switch (action.type) {
     case "increment": {
       return {
-        value: state.value + 1,
+        count: state.count + 1,
       };
     }
     case "decrement": {
       return {
-        value: state.value - 1,
+        count: state.count - 1,
       };
     }
     case "incrementByAmount": {
       return {
-        value: state.value + Number(action.payload),
+        count: state.count + Number(action.payload),
       };
     }
     case "reset": {

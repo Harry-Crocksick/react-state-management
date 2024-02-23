@@ -20,7 +20,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Count: {state.value}</h1>
+      <h1>Count: {state.count}</h1>
       <label htmlFor="">
         <input
           type="text"
